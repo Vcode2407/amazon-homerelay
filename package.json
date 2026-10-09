@@ -1,0 +1,23 @@
+{
+  "name": "homerelay",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "An Alexa+ hackathon household handoff assistant with a real Streamable HTTP MCP server and a local web simulator.",
+  "scripts": {
+    "start": "node src/server.js",
+    "demo": "node scripts/demo.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test",
+    "check": "node --check src/server.js && node --check src/store.js && node --check src/mcp.js && node --check src/assistant.js && node --check src/language.js && node --check src/bedrock.js && node --check src/config.js && node --check public/app.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "3.1148.0",
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "express": "5.3.0",
+    "zod": "4.6.5"
+  }
+}

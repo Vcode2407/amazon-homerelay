@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#172b34">
+    <title>HomeRelay · The family handoff board</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to your family board</a>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="HomeRelay household">
+        <a class="brand" href="/" aria-label="HomeRelay home">
+          <span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="m5 14 11-9 11 9v12H5V14Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M11 18h10m-3-3 3 3-3 3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span>HomeRelay<span class="brand-subtitle">a little less to remember</span></span>
+        </a>
+        <div class="household-label">YOUR HOUSEHOLD</div>
+        <div class="nav-current"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="3" width="5" height="5" rx="1"/><rect x="12" y="3" width="5" height="5" rx="1"/><rect x="3" y="12" width="5" height="5" rx="1"/><rect x="12" y="12" width="5" height="5" rx="1"/></svg>Family board<span class="nav-dot"></span></div>
+        <div class="roster-section">
+          <p class="household-label">THE HOME TEAM</p>
+          <div id="family-roster" class="family-roster" aria-label="Household members"><p class="muted">Loading your household…</p></div>
+        </div>
+        <div class="sidebar-footer">
+          <div class="sidebar-note-icon" aria-hidden="true">↗</div>
+          <p class="sidebar-note-title">One plan. Everyone in the loop.</p>
+          <p>Ask for a handoff, review the plan, then confirm. Your board keeps the details.</p>
+          <div class="prototype-label">AMAZON DEVELOPER HACKATHON</div>
+        </div>
+      </aside>
+
+      <main id="main" class="main-content">
+        <header class="page-header">
+          <div><p class="eyebrow" id="today-date">YOUR DAY, A LITTLE LIGHTER</p><h1>Today at a glance<span class="title-dot">.</span></h1><p class="page-subtitle">The small things, handed over clearly.</p></div>
+          <div class="environment-badge" id="environment-badge"><span class="status-indicator" aria-hidden="true"></span><div><strong>Local Alexa+ simulator</strong><span id="provider-status" role="status">Checking the provider configuration…</span></div><button type="button" class="provider-retry" id="provider-retry" hidden>Retry status</button></div>
+        </header>
+
+        <section class="overview" aria-label="Household overview">
+          <div class="overview-card"><div class="stat-icon mint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m7 12 3 3 7-7"/><rect x="3" y="3" width="18" height="18" rx="5"/></svg></div><div><span class="stat-number" id="stat-open">—</span><span class="stat-label">Still on the list</span></div><span class="stat-caption">We'll get there.</span></div>
+          <div class="overview-card"><div class="stat-icon peach" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="4"/><path d="M7 3v4m10-4v4M3 10h18m-13 5h3"/></svg></div><div><span class="stat-number" id="stat-tomorrow">—</span><span class="stat-label">Due tomorrow</span></div><span class="stat-caption">A little heads-up.</span></div>
+          <div class="overview-card"><div class="stat-icon lavender" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M9 9V6a3 3 0 0 1 6 0v3m-6 6v3a3 3 0 0 0 6 0v-3"/><rect x="5" y="9" width="14" height="6" rx="3"/></svg></div><div><span class="stat-number" id="stat-blocked">—</span><span class="stat-label">Waiting on a step</span></div><span class="stat-caption">Order matters.</span></div>
+        </section>
+
+        <div class="workspace">
+          <section class="board-panel" aria-labelledby="board-heading">
+            <div class="section-heading"><div><p class="section-eyebrow">A SHARED PLAN</p><h2 id="board-heading">Family board <span class="board-count" id="board-count">Loading…</span></h2></div><button type="button" class="new-handoff-button" id="new-handoff" disabled><span aria-hidden="true">+</span> New handoff</button></div>
+            <div class="filters" aria-label="Filter family tasks">
+              <button type="button" class="filter active" data-filter="all" aria-pressed="true">All</button>
+              <button type="button" class="filter" data-filter="today" aria-pressed="false">Today</button>
+              <button type="button" class="filter" data-filter="tomorrow" aria-pressed="false">Tomorrow</button>
+              <button type="button" class="filter" data-filter="completed" aria-pressed="false">Completed</button>
+            </div>
+            <div id="board-error" class="board-error" hidden></div>
+            <div class="task-list" id="task-list" aria-live="polite" aria-busy="true"><div class="loading-state"><div class="loading-line"></div><div class="loading-line short"></div><p>Getting the household together…</p></div></div>
+            <div class="board-footer"><span class="small-check" aria-hidden="true">✓</span><span>Handoff plans are saved after you confirm.</span></div>
+          </section>
+
+          <section class="assistant-panel" aria-labelledby="assistant-heading">
+            <div class="assistant-header"><span class="assistant-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 2.8 6.2L21 12l-6.2 2.8L12 21l-2.8-6.2L3 12l6.2-2.8L12 3Z"/></svg></span><div><h2 id="assistant-heading">A hand with the handoffs</h2><p>Plan together. Confirm before changes.</p></div></div>
+            <div class="conversation" id="conversation" role="log" aria-label="Conversation with HomeRelay" aria-relevant="additions text">
+              <div class="message assistant-message welcome-message"><span class="message-label">HOMERELAY</span><p>What needs a hand? I can look ahead, prepare a handoff, or suggest a new plan when someone's unavailable.</p><p class="welcome-note" id="provider-explainer">Try a sample prompt, or use New handoff to prepare any task for review.</p></div>
+            </div>
+            <div class="composer-area">
+              <div class="quick-prompts" aria-label="Try a sample request">
+                <button type="button" data-prompt="What needs attention tomorrow?">Look ahead to tomorrow<span aria-hidden="true">↗</span></button>
+                <button type="button" data-prompt="Ask Dad to bring the school form tomorrow at 8 am">Hand off the school form<span aria-hidden="true">↗</span></button>
+                <button type="button" data-prompt="Dad cannot do his handoffs tomorrow">Replan Dad's handoffs<span aria-hidden="true">↗</span></button>
+              </div>
+              <form id="chat-form" class="chat-form"><label class="sr-only" for="message-input">Tell HomeRelay what you need</label><textarea id="message-input" name="message" rows="2" maxlength="500" placeholder="One less thing on your mind…" required></textarea><button class="send-button" id="send-button" type="submit" aria-label="Send message"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 7-7 7 7M12 5v14"/></svg></button></form>
+              <div class="composer-footnote"><span id="reply-status" role="status" aria-live="polite">Ready when you are.</span><span>Enter to send · Shift + Enter for a new line</span></div>
+            </div>
+          </section>
+        </div>
+        <footer class="page-footer"><span id="household-zone">Household time · Asia/Kolkata (IST)</span><span>HomeRelay / working prototype</span></footer>
+      </main>
+    </div>
+    <dialog class="handoff-dialog" id="handoff-dialog" aria-labelledby="handoff-heading" aria-describedby="handoff-description">
+      <div class="dialog-heading"><div><p class="section-eyebrow">ONE LESS THING TO REMEMBER</p><h2 id="handoff-heading">A new handoff</h2></div><button type="button" class="dialog-close" id="handoff-close" aria-label="Close new handoff form">×</button></div>
+      <p class="dialog-description" id="handoff-description">Add the details. We'll prepare a preview for you to review and confirm.</p>
+      <form id="handoff-form">
+        <fieldset class="handoff-fields" id="handoff-fields">
+          <div class="form-field"><label for="handoff-title">What needs doing?</label><input id="handoff-title" name="title" type="text" placeholder="e.g. Pick up the birthday cake" minlength="3" maxlength="160" required autocomplete="off"><span class="field-hint">Use any title, 3–160 characters.</span></div>
+          <div class="form-field"><label for="handoff-owner">Who's taking it on?</label><select id="handoff-owner" name="assigneeId" required></select></div>
+          <div class="form-columns"><div class="form-field"><label for="handoff-date">Date</label><input id="handoff-date" name="dueDate" type="date" required aria-describedby="handoff-time-zone"></div><div class="form-field"><label for="handoff-time">Time</label><input id="handoff-time" name="dueTime" type="time" value="08:00" required aria-describedby="handoff-time-zone"></div></div>
+          <p class="form-time-zone" id="handoff-time-zone">All times use India Standard Time (IST), Asia/Kolkata.</p>
+          <div class="form-columns"><div class="form-field"><label for="handoff-priority">Priority</label><select id="handoff-priority" name="priority"><option value="normal">Normal</option><option value="high">High priority</option></select></div><div class="form-field"><label for="handoff-prerequisite">Waits for <span class="optional-label">(optional)</span></label><select id="handoff-prerequisite" name="prerequisite"><option value="">No prerequisite</option></select></div></div>
+        </fieldset>
+        <div class="handoff-error" id="handoff-error" role="alert" hidden></div>
+        <div class="dialog-actions"><button type="button" class="secondary-button" id="handoff-cancel">Cancel</button><button type="submit" class="primary-button" id="handoff-submit">Preview handoff <span aria-hidden="true">→</span></button></div>
+        <p class="dialog-footnote" id="handoff-form-status" role="status">Nothing is saved until you confirm the preview.</p>
+      </form>
+    </dialog>
+  </body>
+</html>
