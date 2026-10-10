@@ -1,0 +1,30 @@
+name: HomeRelay checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  local-mcp:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      ASSISTANT_PROVIDER: offline
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Check JavaScript syntax
+        run: npm run check
+      - name: Test HTTP, actual MCP, storage failures, and provider stubs
+        run: npm test
+      - name: Reproduce the isolated MCP workflow and restart
+        run: npm run verify:mcp

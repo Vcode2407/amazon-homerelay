@@ -1,6 +1,6 @@
 # HomeRelay hackathon plan
 
-Working project: a household assistant that keeps responsibilities and dependencies visible, then proposes a reviewed handoff when availability changes. Primary target: **Alexa+**. Status: validated local MVP with conversational drafts and an optional Bedrock adapter; live AWS validation and submission preparation remain open.
+Working project: a household assistant that keeps responsibilities and dependencies visible, then proposes a reviewed handoff when availability changes. Primary target: **Alexa+**, using the real local MCP path. Status: validated local application, [public MIT repository](https://github.com/Vcode2407/amazon-homerelay), English description/feedback draft, and judge reproduction command. Video publication and Devpost submission remain open; live Bedrock is optional and unverified.
 
 ## Deadline and official requirements
 
@@ -8,15 +8,17 @@ Submission closes **October 23, 2026 at 12:00 pm PDT**, which is **October 24, 2
 
 - [x] Build and validate a working self-hosted MCP server over Streamable HTTP, negotiating version 2025-11-25.
 - [x] Verify actual runtime use of MCP in the source and browser prototype.
-- [ ] Show the MCP workflow in the final recorded demonstration.
-- [ ] Publish all runnable source, assets, and setup instructions in a GitHub repository with an open-source license.
-- [ ] Write an English project description explaining the problem and functioning features.
+- [x] Show the MCP workflow in a completed 2:44 local English demonstration; [recording evidence](DEMO.md). Public upload remains pending.
+- [x] Publish runnable source, assets, and setup instructions in a GitHub repository with an open-source license.
+- [x] Write an English project description explaining the problem and functioning features.
 - [ ] Upload an English demo **under three minutes**, publicly viewable on YouTube or Vimeo.
 - [ ] Provide feedback for every tool, API, and SDK: purpose, strengths, problems, onboarding, and whether we would use it again.
 - [ ] Identify the primary track and any supported mini-challenge claims.
 - [ ] Keep the project available to judges through November 20.
 
 The [FAQ](https://amazonappdev2026.devpost.com/details/faqs) confirms that Alexa+'s partner-only SDK, toolkit, CLI, and web simulator are unavailable to entrants. A self-hosted MCP server and our own web front end are the intended route. No physical Alexa device is needed.
+
+Rechecked October 10: the FAQ also confirms that a locally runnable public repository plus demo video is sufficient; hosted service and live AWS inference are not required for this main-track path. [JUDGING.md](JUDGING.md) gives exact clean-checkout instructions and an independent actual MCP probe.
 
 The registration email mentions $150 AWS credits. The [resources page](https://amazonappdev2026.devpost.com/resources) now says codes ran out on **October 7** and requests are closed. This prototype works offline; the optional Bedrock adapter requires separately configured AWS access. No live AWS request has been made.
 
@@ -25,7 +27,7 @@ The registration email mentions $150 AWS credits. The [resources page](https://a
 | Dates (IST) | Outcome |
 | --- | --- |
 | Oct 9 | Completed: local MVP, real MCP, persistence, dependency checks, conversational drafts/corrections, handoff form, and stub-tested Bedrock adapter. |
-| Oct 10–11 | Configure an AWS account and compatible model if using Bedrock; verify live tool use, correction, provider failures, and billing. |
+| Oct 10–11 | Public source, pinned CI, clean-checkout checks, independent MCP/restart probe, and truthful local recording. Bedrock remains optional. |
 | Oct 12–13 | Improve daily briefs and check keyboard navigation, responsive layouts, and the final demo scenario. |
 | Oct 14–15 | Try the demo with another person and fix the points where they get stuck. Select the validated provider mode for recording. |
 | Oct 16–17 | Stabilize the command vocabulary and seed scenario. Record firsthand tool feedback with reproduction evidence. |
@@ -61,9 +63,15 @@ No mini-challenge is currently claimed. AWS requires documented qualifying use. 
 - Negotiated MCP protocol and tool-call evidence: initialize response and SDK client both verified 2025-11-25; SDK discovery and household tool calls passed.
 - Browser demo: form previews and missing-detail follow-ups verified. Earlier checks also verified owner correction, confirmation, blocked tasks, reassignment, desktop composer at 1266×712, and mobile layout at 390×844.
 - Persistence: automated restart tests passed; confirmed changes also remained after browser reload. Fresh seed household restored after browser QA; verified sample state retained locally in ignored `artifacts/`.
-- Public repository URL: pending.
+- Public repository URL: https://github.com/Vcode2407/amazon-homerelay . Published October 10; keep source and assets accessible for judging.
 - Live Bedrock model/region and validation evidence: pending; stub tests establish application behavior only.
 - Public demo video URL: pending.
 - Final submission URL: pending.
 
 Technical references: [MCP Streamable HTTP specification](https://modelcontextprotocol.io/specification/2025-11-25/basic/transports), [official TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk), and [MCP Apps/Agent Skills resources](https://apps.extensions.modelcontextprotocol.io/api/).
+
+## October 10 reproducibility checks
+
+`npm ci` succeeded with zero reported vulnerabilities; all 40 tests and `npm run check` passed again on Node 22.23.1. `npm run verify:mcp` additionally verified protocol 2025-11-25, all seven discovered tools, cancellation, explicit diagnostic confirmation, prerequisite blocking, and restart persistence on its own disposable fictional board. CI repeats these commands without credentials. Its hosted result remains pending until the workflow is pushed and observed passing.
+
+The recorded browser workflow passed its assertions: a 164.013-second take, 73 actual MCP requests, seven household tool names, preview/correction/confirmation, dependency completion, reassignment, and persisted changes after reload. The final English MP4 and caption/narration inputs are prepared locally; public YouTube/Vimeo upload is still required.

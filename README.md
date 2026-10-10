@@ -2,14 +2,18 @@
 
 HomeRelay is a local household handoff assistant being built for the Alexa+ track of **Build, Ship, Shape: Amazon Developer Hackathon**. It helps a family see tomorrow's responsibilities, understand blocked tasks, and preview a revised plan when someone's availability changes.
 
-**Status:** working local MVP, validated on October 9, 2026. Conversational drafts, corrections, a handoff form, and an optional Amazon Bedrock adapter are implemented. Live AWS validation, the public repository, submission, and demo video remain open.
+**Status:** working local MCP application, revalidated on October 10, 2026. Conversational drafts, corrections, a handoff form, and an optional Amazon Bedrock adapter are implemented. [Public MIT source](https://github.com/Vcode2407/amazon-homerelay) is available. Final video publication and Devpost submission remain open. Live AWS is unverified and optional for the selected MCP track path.
+
+![The actual HomeRelay simulator reviewing a corrected handoff before confirmation](docs/assets/handoff-review.png)
+
+A truthful **2:44 English local demo** is recorded and prepared for upload. [Recording outline and evidence](docs/DEMO.md) distinguish the working offline MCP workflow from unverified provider integrations; the required public video URL remains pending.
 
 ## Run locally
 
 Use **Node.js 22 or newer**. From this directory:
 
 ```powershell
-npm install
+npm ci
 npm start
 ```
 
@@ -57,14 +61,19 @@ Current scope includes household briefs, task creation, dependency checks, compl
 ```powershell
 npm test
 npm run check
+npm run verify:mcp
 ```
 
 All **40 tests pass**, covering actual MCP negotiation/calls, draft follow-ups and corrections, ambiguous input, confirmation, form previews, dependency blocking, reassignment, cancellation, stale previews, restart persistence, origin validation, recovery after failed saves, and the Bedrock tool loop with stub responses. Syntax checks pass. Browser checks verified the form and conversational draft flow, alongside the earlier confirmation, dependency, persistence, and responsive-layout checks.
 
 Board changes are persisted before becoming visible in memory. If a save fails, the old plan remains intact and the action can be retried.
 
+The independent MCP probe creates disposable fictional data and checks actual protocol negotiation, discovery, preview/cancel/confirm, prerequisite enforcement, and restart persistence. [Judge instructions](docs/JUDGING.md) provide a clean-checkout walkthrough. GitHub CI repeats these checks without sponsor secrets or live model calls; a hosted result is only verified once its run succeeds.
+
 ## Prototype boundaries
 
 There is no production authentication, public hosting, native Alexa integration, calendar connection, or notification delivery. A deployable version needs authentication and household access controls before exposing these tools over a network. Confirmed tasks persist on disk; conversation history and previews are temporary and expire or disappear on restart. The optional Bedrock path still needs account/model access and live verification.
 
 See [the submission plan](docs/HACKATHON.md) and [the research friction log](docs/FRICTION_LOG.md) for remaining work and official sources.
+
+The [official Alexa+ FAQ](https://amazonappdev2026.devpost.com/details/faqs) accepts a locally runnable public repository and demo video; hosting, a physical device, and live Bedrock are not required for this main-track route.

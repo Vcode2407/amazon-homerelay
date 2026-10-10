@@ -1,6 +1,6 @@
 # HomeRelay — Devpost submission draft
 
-English draft prepared October 10, 2026. These are reviewable submission materials, not a published or submitted entry. The working build is local; native Alexa and live AWS use have not been verified.
+English draft prepared October 10, 2026. The [MIT-licensed source is public on GitHub](https://github.com/Vcode2407/amazon-homerelay); this remains a reviewable draft and no Devpost entry is submitted. The working build is local; native Alexa and live AWS use have not been verified.
 
 ## Project name and tagline
 
@@ -44,7 +44,7 @@ The provider adapter required matching tool-use IDs with tool results, bounding 
 
 ## Accomplishments and learning
 
-The prototype connects a visible planning flow to actual MCP calls, including confirmation, dependency blocking, cancellation, stale-preview handling, and restart persistence. The most recent recorded local validation in the README reports 40 passing tests, including eight Bedrock stub tests, plus syntax and browser workflow checks.
+The prototype connects a visible planning flow to actual MCP calls, including confirmation, dependency blocking, cancellation, stale-preview handling, and restart persistence. October 10 revalidation passed all 40 tests, including eight Bedrock stub tests, plus syntax checks. An independent `npm run verify:mcp` command negotiates the protocol, discovers seven tools, exercises review/confirmation/dependencies, and checks persistence after restart. The public CI workflow repeats these checks without sponsor credentials; a hosted run is pending until the workflow is pushed.
 
 The design demonstrates why a suggestion, a preview, and a saved household change need distinct states. A friendly reply cannot substitute for a successfully persisted tool result.
 
@@ -62,9 +62,11 @@ These observations come from source, local tests, and the recorded friction log.
 
 The research friction log separately records the published partner-access limits for Alexa+ developer tools and the October 7 AWS-credit exhaustion notice. Those are documentation findings, not failed installations or firsthand cloud incidents. See [FRICTION_LOG.md](FRICTION_LOG.md).
 
+For the October 10 clean-install check, Node 22.23.1 was already installed; `npm ci` completed with zero reported vulnerabilities. The simulator and direct SDK-client probe then ran without an account or API key. This is the observed local onboarding path, not an Alexa developer-console or AWS onboarding claim. Codex assisted implementation, tests, review, documentation, and local recording automation; application behavior was checked with the actual test suite and HTTP/MCP results.
+
 ## Limits and next steps
 
-There is no native Alexa connection, notification delivery, calendar integration, production authentication, or public hosting. The simulator never claims to contact a household member. The offline recognizer is intentionally bounded. Live Bedrock verification and the final public source/video package are pending.
+There is no native Alexa connection, notification delivery, calendar integration, production authentication, or public hosting. The simulator never claims to contact a household member. The offline recognizer is intentionally bounded. Public source is available; final video publication and submission remain pending. Live Bedrock is unverified and optional for the selected local MCP path, which the official FAQ permits without public hosting.
 
 Next steps are to validate the optional provider with an authorized account, retain the reproducible offline route, test the workflow with another person, and add household access controls before considering a network deployment. AWS Builder eligibility will be assessed only after documented qualifying use. An Open Source mini-challenge would require a separate additional contribution; licensing HomeRelay alone is not that contribution.
 
@@ -91,12 +93,12 @@ Do not substitute a simulated Bedrock response for a live provider recording. A 
 | Tagline and English description | Draft text above; review before pasting. |
 | Primary track | Alexa+ |
 | Mini-challenges | None claimed. |
-| GitHub repository URL | Pending publication of licensed, runnable source and assets. |
-| Setup/testing instructions | README and `npm run demo`; verify from a clean checkout before publication. |
-| Public English YouTube/Vimeo video under three minutes | Pending recording and upload. |
+| GitHub repository URL | https://github.com/Vcode2407/amazon-homerelay — public, MIT licensed. |
+| Setup/testing instructions | [JUDGING.md](JUDGING.md), README, `npm run demo`, and isolated `npm run verify:mcp`; October 10 local checks passed. |
+| Public English YouTube/Vimeo video under three minutes | A truthful 2:44 local English MP4 is recorded; [outline/evidence](DEMO.md). Public upload and URL remain pending. |
 | Product feedback | Draft above; complete firsthand live feedback only for tools actually used. |
 | Optional friction-log attachment | Existing log; review for accuracy and remove private data. |
-| Live AWS model/region and evidence | Pending; do not present stub tests as AWS validation. |
+| Live AWS model/region and evidence | Optional and unverified; no AWS mini-challenge claimed, and not needed for the selected main MCP route. |
 | Entrant/team details and eligibility | User verification pending. |
 | Judge access through November 20 | Arrange and verify repository/video access. |
 | Final Devpost URL/status | Pending; no submission made by this draft. |
