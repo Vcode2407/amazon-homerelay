@@ -4,6 +4,8 @@ A **2 minute 44 second English demo** was recorded on October 10, 2026 using the
 
 **Public YouTube/Vimeo URL: pending upload.** The local MP4 is prepared; its presence does not satisfy the publication requirement. Add the publicly viewable link here and in the Devpost form after uploading.
 
+Review or download the actual [English 2:44 MP4](media/HomeRelay-demo-en.mp4). GitHub hosting makes this recording reviewable; the event still requires the public YouTube/Vimeo link.
+
 The recording shows:
 
 | Time | Actual behavior |
