@@ -1,8 +1,10 @@
-# Recorded local demonstration
+# Recorded local demonstration draft
 
-A **2 minute 44 second English demo** was recorded on October 10, 2026 using the actual local application, an isolated browser, and fresh fictional Alex/Maya/Sam data. It uses the bounded offline router and real MCP calls. It does not contain a stubbed model response or claim a native Alexa/AWS connection.
+A **2 minute 44 second English demo draft** was recorded on October 10, 2026 using the actual local application, an isolated browser, and fresh fictional Alex/Maya/Sam data. It uses the bounded offline router and real MCP calls. It does not contain a stubbed model response or claim a native Alexa/AWS connection. Its narration is the locally synthesized Microsoft Zira voice, not the entrant's voice. The original MP4 is retained for review and rehearsal.
 
-**Public YouTube/Vimeo URL: pending upload.** The local MP4 is prepared; its presence does not satisfy the publication requirement. Add the publicly viewable link here and in the Devpost form after uploading.
+To replace that narration with your own voice, or record the app yourself, follow the optional [recording guide and timed script](RECORDING_GUIDE.md). Review and choose the final recording before upload. The checked official pages do not specify a camera appearance or the entrant's own voice, and do not expressly address synthesized narration; this draft is not evidence of organizer approval for that narration choice.
+
+**Public YouTube/Vimeo URL: pending upload.** A local draft MP4 is prepared; its presence does not satisfy the publication requirement. Add the publicly viewable final link here and in the Devpost form after uploading.
 
 Review or download the actual [English 2:44 MP4](media/HomeRelay-demo-en.mp4). GitHub hosting makes this recording reviewable; the event still requires the public YouTube/Vimeo link.
 
