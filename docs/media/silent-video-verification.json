@@ -1,0 +1,24 @@
+{
+  "video": "HomeRelay-demo-en.mp4",
+  "verifiedAt": "2026-10-11T07:50:59.231325+00:00",
+  "operation": "Removed all audio tracks and optional container metadata; copied the complete encoded video stream without re-encoding.",
+  "durationSeconds": 164.0,
+  "bytes": 3792229,
+  "sha256": "e1919a1deb2fa5ae7329fb16fe6442467f680e670784e5c8198801ceefffd2ce",
+  "audioStreamCount": 0,
+  "streamTypes": [
+    "video"
+  ],
+  "videoCodec": "h264",
+  "videoWidth": 1600,
+  "videoHeight": 1020,
+  "videoPacketCount": 4100,
+  "videoPayloadSha256": "ea9fbb4ba06b67b0ed2a45e04deb22837ffc394d68fa13d090b53799f1a7a719",
+  "codecConfigurationSha256": "11ed5ab54aed1d0913d3e69b099ecd9fb12ded2d2ad67fa01e424b43d0d6e88e",
+  "originalFileSha256": "e58be2b144260aca613f45beaabffe57892b7559289d2fc184db30510d807345",
+  "originalVideoDurationSeconds": 164.0,
+  "encodedVideoUnchanged": true,
+  "removedAudioOnlyTailSeconds": 0,
+  "fullVideoDecodePassed": true,
+  "disclosure": "Actual application footage, captions and provider-status labels are unchanged. This edit does not change software authoring, integration provenance, or submission readiness."
+}

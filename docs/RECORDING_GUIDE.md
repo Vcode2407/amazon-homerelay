@@ -1,15 +1,15 @@
 # Record HomeRelay with your own voice
 
-The existing [2:44 walkthrough](media/HomeRelay-demo-en.mp4) contains real application footage with a locally synthesized Microsoft Zira voice. It is a draft for review and rehearsal, not a recording of your voice. Keep that original file; export your own version under a new name.
+The existing [2:44 walkthrough](media/HomeRelay-demo-en.mp4) is a silent recording of the real application with English captions. Its audio track has been removed. This guide is optional if you later choose to add your own voice or record another take; the current video does not require you to record narration. Keep the silent file and export any new version under a different name.
 
-The [Amazon rules, section 4](https://amazonappdev2026.devpost.com/rules) request a functioning-project demonstration under three minutes, a publicly visible YouTube/Vimeo link, and English materials or an English translation. I found no requirement in the checked [rules](https://amazonappdev2026.devpost.com/rules), [FAQ](https://amazonappdev2026.devpost.com/details/faqs), or [resources](https://amazonappdev2026.devpost.com/resources) to show your face or use your own voice. Those pages also do not expressly address synthesized narration. Checked October 11, 2026; recheck before submitting.
+The [Amazon rules, section 4](https://amazonappdev2026.devpost.com/rules) request a functioning-project demonstration under three minutes, a publicly visible YouTube/Vimeo link, and English materials or an English translation. I found no requirement in the checked [rules](https://amazonappdev2026.devpost.com/rules), [FAQ](https://amazonappdev2026.devpost.com/details/faqs), or [resources](https://amazonappdev2026.devpost.com/resources) to show your face or use your own voice. Checked October 11, 2026; recheck before submitting.
 
-## Replace the draft narration
+## Optionally add your own voice
 
 If you have Microsoft Clipchamp, its [voiceover instructions](https://support.microsoft.com/en-us/clipchamp/how-to-add-voiceovers-to-videos) and [mute instructions](https://support.microsoft.com/en-us/clipchamp/how-to-mute-separate-and-delete-audio-from-video) describe this workflow:
 
 1. Create a video project, import `HomeRelay-demo-en.mp4`, and place it at the start of the timeline.
-2. Select that video and click its speaker symbol to mute the computer voice. Keep the picture and its captions.
+2. Keep the original picture and captions. The current file has no audio to mute; if using a different take with sound, select its speaker symbol to mute unwanted audio.
 3. Choose **Record & create > Audio**, allow microphone access, and select your microphone. Record a ten-second test and listen to it.
 4. Record the script below in short sections. Save each take and place its audio at the matching start time. Alternatively, import a recording made on your phone. Wear headphones if watching the reference while recording.
 5. Review the complete timeline. Speak naturally; pauses between sections are fine. Check that narration matches the visible action and existing captions.
@@ -19,7 +19,7 @@ The base footage is 2:44, leaving 16 seconds before the limit. Avoid adding a lo
 
 ## Timed script for the existing footage
 
-These words match the draft's captions. Rehearse once while watching the muted video. If a section takes longer than its window, redo it with a comfortable, slightly quicker pace; do not cut off a sentence. This is narration over existing footage, not a claim that you personally performed the recorded clicks.
+These words match the current video's captions and also serve as a written walkthrough. If adding your voice, rehearse once while watching the silent video. If a section takes longer than its window, redo it with a comfortable, slightly quicker pace; do not cut off a sentence. This is narration over existing footage, not a claim that you personally performed the recorded clicks.
 
 | Time | Say |
 | --- | --- |
@@ -46,4 +46,4 @@ Aim for 2:40–2:50: introduce the problem briefly, show the missing-time questi
 
 ## Finish the video requirement
 
-Upload the reviewed final MP4 to YouTube or Vimeo with public visibility. Open the resulting link while signed out and verify playback, sound, readable app text, and a duration below three minutes. Put that playable URL in the Devpost video field. A GitHub MP4 link alone does not fulfill the host requirement. Preserve source and video access through the end of judging, November 20, 2026, as required by the [official rules](https://amazonappdev2026.devpost.com/rules).
+Upload the reviewed final MP4 to YouTube or Vimeo with public visibility. Open the resulting link while signed out and verify playback, readable app text and captions, and a duration below three minutes. The current MP4 should play silently; check sound only if you intentionally add your voice. Put that playable URL in the Devpost video field. A GitHub MP4 link alone does not fulfill the host requirement. Preserve source and video access through the end of judging, November 20, 2026, as required by the [official rules](https://amazonappdev2026.devpost.com/rules).
