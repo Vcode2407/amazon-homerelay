@@ -44,7 +44,7 @@ The provider adapter required matching tool-use IDs with tool results, bounding 
 
 ## Accomplishments and learning
 
-The prototype connects a visible planning flow to actual MCP calls, including confirmation, dependency blocking, cancellation, stale-preview handling, and restart persistence. October 10 revalidation passed all 40 tests, including eight Bedrock stub tests, plus syntax checks. An independent `npm run verify:mcp` command negotiates the protocol, discovers seven tools, exercises review/confirmation/dependencies, and checks persistence after restart. The public CI workflow repeats these checks without sponsor credentials; a hosted run is pending until the workflow is pushed.
+The prototype connects a visible planning flow to actual MCP calls, including confirmation, dependency blocking, cancellation, stale-preview handling, and restart persistence. October 10 revalidation passed all 40 tests, including eight Bedrock stub tests, plus syntax checks. An independent `npm run verify:mcp` command negotiates the protocol, discovers seven tools, exercises review/confirmation/dependencies, and checks persistence after restart. The [public CI workflow](https://github.com/Vcode2407/amazon-homerelay/actions) repeats these checks without sponsor credentials and includes successful hosted runs; match the run's source commit to the revision being reviewed.
 
 The design demonstrates why a suggestion, a preview, and a saved household change need distinct states. A friendly reply cannot substitute for a successfully persisted tool result.
 
@@ -66,7 +66,7 @@ For the October 10 clean-install check, Node 22.23.1 was already installed; `npm
 
 ## Limits and next steps
 
-There is no native Alexa connection, notification delivery, calendar integration, production authentication, or public hosting. The simulator never claims to contact a household member. The offline recognizer is intentionally bounded. Public source is available; final video publication and submission remain pending. Live Bedrock is unverified and optional for the selected local MCP path, which the official FAQ permits without public hosting.
+There is no native Alexa connection, notification delivery, calendar integration, production authentication, or public application hosting. The simulator never claims to contact a household member. The offline recognizer is intentionally bounded. Public source and the [published 2:44 YouTube demonstration](https://www.youtube.com/watch?v=8Zr2xYNAXPE) are available; entrant details, firsthand feedback review, declarations, and submission remain pending. Live Bedrock is unverified and optional for the selected local MCP path, which the official FAQ permits without public hosting.
 
 Next steps are to validate the optional provider with an authorized account, retain the reproducible offline route, test the workflow with another person, and add household access controls before considering a network deployment. AWS Builder eligibility will be assessed only after documented qualifying use. An Open Source mini-challenge would require a separate additional contribution; licensing HomeRelay alone is not that contribution.
 
@@ -95,12 +95,12 @@ Do not substitute a simulated Bedrock response for a live provider recording. A 
 | Mini-challenges | None claimed. |
 | GitHub repository URL | https://github.com/Vcode2407/amazon-homerelay — public, MIT licensed. |
 | Setup/testing instructions | [JUDGING.md](JUDGING.md), README, `npm run demo`, and isolated `npm run verify:mcp`; October 10 local checks passed. |
-| Public English YouTube/Vimeo video under three minutes | A truthful 2:44 local English MP4 is recorded; [outline/evidence](DEMO.md). Public upload and URL remain pending. |
-| Product feedback | Draft above; complete firsthand live feedback only for tools actually used. |
+| Public English YouTube/Vimeo video under three minutes | [Public YouTube video](https://www.youtube.com/watch?v=8Zr2xYNAXPE), published October 11, 2026: 2:44, silent actual-screen footage, burned English captions, and an English subtitle track. Uploaded source MP4 unchanged; [outline/evidence](DEMO.md). Copy this URL into the Devpost field. |
+| Product feedback | Draft above; entrant review pending. Include firsthand feedback only for tools actually used, and retain the unverified live-service limits. |
 | Optional friction-log attachment | Existing log; review for accuracy and remove private data. |
 | Live AWS model/region and evidence | Optional and unverified; no AWS mini-challenge claimed, and not needed for the selected main MCP route. |
 | Entrant/team details and eligibility | User verification pending. |
-| Judge access through November 20 | Arrange and verify repository/video access. |
+| Judge access through November 20 | Public repository and [YouTube video](https://www.youtube.com/watch?v=8Zr2xYNAXPE) are published; logged-out playback verification and continued availability remain to be checked. |
 | Final Devpost URL/status | Pending; no submission made by this draft. |
 
 Deadline: **October 23, 2026, 12:00 pm PDT / October 24, 2026, 00:30 IST**. The selected MCP path, video, feedback, and judge-access requirements are described in the [official rules](https://amazonappdev2026.devpost.com/rules); entrant-access guidance is in the [FAQ](https://amazonappdev2026.devpost.com/details/faqs). Recheck the final form and rules before submitting.

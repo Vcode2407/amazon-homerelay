@@ -1,12 +1,12 @@
-# Recorded local demonstration draft
+# Published local demonstration
 
-A **2 minute 44 second silent demo draft with English captions** was recorded on October 10, 2026 using the actual local application, an isolated browser, and fresh fictional Alex/Maya/Sam data. It uses the bounded offline router and real MCP calls. The audio track has been removed; the actual screen footage and burned captions are unchanged. It does not contain a stubbed model response or claim a native Alexa/AWS connection.
+A **2 minute 44 second silent demo with English captions** was recorded on October 10, 2026 using the actual local application, an isolated browser, and fresh fictional Alex/Maya/Sam data. It uses the bounded offline router and real MCP calls. The audio track has been removed; the actual screen footage and burned captions are unchanged. It does not contain a stubbed model response or claim a native Alexa/AWS connection.
 
-The current demo is silent. If you later choose to add your own voice or record the app yourself, follow the optional [recording guide and timed script](RECORDING_GUIDE.md). Review the final recording before upload.
+The current demo is silent. If you later choose to add your own voice or record the app yourself, follow the optional [recording guide and timed script](RECORDING_GUIDE.md). Review any replacement before uploading it.
 
-**Public YouTube/Vimeo URL: pending upload.** A local draft MP4 is prepared; its presence does not satisfy the publication requirement. Add the publicly viewable final link here and in the Devpost form after uploading.
+**Public YouTube URL:** [HomeRelay — 2:44 demonstration](https://www.youtube.com/watch?v=8Zr2xYNAXPE), published October 11, 2026 with an English subtitle track. The uploaded source MP4 is unchanged. Add this URL to the Devpost video field; no entry has been submitted.
 
-Review or download the actual [silent, English-captioned 2:44 MP4](media/HomeRelay-demo-en.mp4). GitHub hosting makes this recording reviewable; the event still requires the public YouTube/Vimeo link.
+Watch the [published YouTube demonstration](https://www.youtube.com/watch?v=8Zr2xYNAXPE), or review/download the actual [silent, English-captioned 2:44 MP4](media/HomeRelay-demo-en.mp4). The YouTube link supplies the required video host.
 
 The recording shows:
 
@@ -37,4 +37,4 @@ Follow [JUDGING.md](JUDGING.md), run `npm run demo`, and open localhost:4174. Us
 
 If recording another take, verify the initial four-task board, preview-without-save behavior, the disabled dependent completion button, actual tool results, and persisted final state. Describe any unexpected result accurately in the captions. Keep the final exported file strictly below three minutes and retain clear English captions.
 
-Remaining steps: upload the final MP4 publicly to YouTube or Vimeo, verify logged-out playback, add the video URL to the submission, and retain source/video access through November 20. No AWS mini-challenge or live-model evidence is included.
+Remaining steps: verify logged-out playback, add the published video URL to the submission, complete entrant details and declarations, review firsthand tool feedback, and retain source/video access through November 20. No Devpost entry has been submitted. No AWS mini-challenge or live-model evidence is included.

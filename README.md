@@ -2,11 +2,11 @@
 
 HomeRelay is a local household handoff assistant being built for the Alexa+ track of **Build, Ship, Shape: Amazon Developer Hackathon**. It helps a family see tomorrow's responsibilities, understand blocked tasks, and preview a revised plan when someone's availability changes.
 
-**Status:** working local MCP application, revalidated on October 10, 2026. Conversational drafts, corrections, a handoff form, and an optional Amazon Bedrock adapter are implemented. [Public MIT source](https://github.com/Vcode2407/amazon-homerelay) is available. Final video publication and Devpost submission remain open. Live AWS is unverified and optional for the selected MCP track path.
+**Status:** working local MCP application, revalidated on October 10, 2026. Conversational drafts, corrections, a handoff form, and an optional Amazon Bedrock adapter are implemented. [Public MIT source](https://github.com/Vcode2407/amazon-homerelay) and the [published YouTube demonstration](https://www.youtube.com/watch?v=8Zr2xYNAXPE) are available. Entrant details, firsthand feedback review, declarations, and Devpost submission remain open. Live AWS is unverified and optional for the selected MCP track path.
 
 ![The actual HomeRelay simulator reviewing a corrected handoff before confirmation](docs/assets/handoff-review.png)
 
-A truthful **2:44 English local demo** is recorded and prepared for upload. [Recording outline and evidence](docs/DEMO.md) distinguish the working offline MCP workflow from unverified provider integrations; the required public video URL remains pending.
+A truthful **[2:44 English-captioned local demo](https://www.youtube.com/watch?v=8Zr2xYNAXPE)** was published publicly to YouTube on October 11, 2026, with an English subtitle track. The uploaded source MP4 is unchanged and silent. [Recording outline and evidence](docs/DEMO.md) distinguish the working offline MCP workflow from unverified provider integrations.
 
 ## Run locally
 

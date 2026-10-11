@@ -1,6 +1,6 @@
 # HomeRelay hackathon plan
 
-Working project: a household assistant that keeps responsibilities and dependencies visible, then proposes a reviewed handoff when availability changes. Primary target: **Alexa+**, using the real local MCP path. Status: validated local application, [public MIT repository](https://github.com/Vcode2407/amazon-homerelay), English description/feedback draft, and judge reproduction command. Video publication and Devpost submission remain open; live Bedrock is optional and unverified.
+Working project: a household assistant that keeps responsibilities and dependencies visible, then proposes a reviewed handoff when availability changes. Primary target: **Alexa+**, using the real local MCP path. Status: validated local application, [public MIT repository](https://github.com/Vcode2407/amazon-homerelay), [published 2:44 YouTube video](https://www.youtube.com/watch?v=8Zr2xYNAXPE), English description/feedback draft, and judge reproduction command. Entrant details, firsthand feedback review, declarations, and Devpost submission remain open; live Bedrock is optional and unverified.
 
 ## Deadline and official requirements
 
@@ -8,10 +8,10 @@ Submission closes **October 23, 2026 at 12:00 pm PDT**, which is **October 24, 2
 
 - [x] Build and validate a working self-hosted MCP server over Streamable HTTP, negotiating version 2025-11-25.
 - [x] Verify actual runtime use of MCP in the source and browser prototype.
-- [x] Show the MCP workflow in a completed 2:44 local English demonstration; [recording evidence](DEMO.md). Public upload remains pending.
+- [x] Show the MCP workflow in a completed [2:44 public YouTube demonstration](https://www.youtube.com/watch?v=8Zr2xYNAXPE); [recording evidence](DEMO.md).
 - [x] Publish runnable source, assets, and setup instructions in a GitHub repository with an open-source license.
 - [x] Write an English project description explaining the problem and functioning features.
-- [ ] Upload an English demo **under three minutes**, publicly viewable on YouTube or Vimeo.
+- [x] Publish the English demo **under three minutes** on YouTube with English burned captions and an English subtitle track.
 - [ ] Provide feedback for every tool, API, and SDK: purpose, strengths, problems, onboarding, and whether we would use it again.
 - [ ] Identify the primary track and any supported mini-challenge claims.
 - [ ] Keep the project available to judges through November 20.
@@ -65,13 +65,13 @@ No mini-challenge is currently claimed. AWS requires documented qualifying use. 
 - Persistence: automated restart tests passed; confirmed changes also remained after browser reload. Fresh seed household restored after browser QA; verified sample state retained locally in ignored `artifacts/`.
 - Public repository URL: https://github.com/Vcode2407/amazon-homerelay . Published October 10; keep source and assets accessible for judging.
 - Live Bedrock model/region and validation evidence: pending; stub tests establish application behavior only.
-- Public demo video URL: pending.
+- Public demo video URL: [HomeRelay on YouTube](https://www.youtube.com/watch?v=8Zr2xYNAXPE), published October 11, 2026; 2:44 and silent, with English captions/subtitles. Logged-out playback verification remains pending.
 - Final submission URL: pending.
 
 Technical references: [MCP Streamable HTTP specification](https://modelcontextprotocol.io/specification/2025-11-25/basic/transports), [official TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk), and [MCP Apps/Agent Skills resources](https://apps.extensions.modelcontextprotocol.io/api/).
 
 ## October 10 reproducibility checks
 
-`npm ci` succeeded with zero reported vulnerabilities; all 40 tests and `npm run check` passed again on Node 22.23.1. `npm run verify:mcp` additionally verified protocol 2025-11-25, all seven discovered tools, cancellation, explicit diagnostic confirmation, prerequisite blocking, and restart persistence on its own disposable fictional board. CI repeats these commands without credentials. Its hosted result remains pending until the workflow is pushed and observed passing.
+`npm ci` succeeded with zero reported vulnerabilities; all 40 tests and `npm run check` passed again on Node 22.23.1. `npm run verify:mcp` additionally verified protocol 2025-11-25, all seven discovered tools, cancellation, explicit diagnostic confirmation, prerequisite blocking, and restart persistence on its own disposable fictional board. CI repeats these commands without credentials. Successful hosted runs are available in the [public CI history](https://github.com/Vcode2407/amazon-homerelay/actions); match the run's source commit to the revision being reviewed.
 
-The recorded browser workflow passed its assertions: a 164.013-second take, 73 actual MCP requests, seven household tool names, preview/correction/confirmation, dependency completion, reassignment, and persisted changes after reload. The current MP4 is silent, with the actual screen footage and English captions retained; public YouTube/Vimeo upload is still required.
+The recorded browser workflow passed its assertions: a 164.013-second take, 73 actual MCP requests, seven household tool names, preview/correction/confirmation, dependency completion, reassignment, and persisted changes after reload. The current MP4 is silent, with the actual screen footage and English captions retained. This unchanged source MP4 was [published publicly on YouTube](https://www.youtube.com/watch?v=8Zr2xYNAXPE) on October 11, 2026 with an English subtitle track.
